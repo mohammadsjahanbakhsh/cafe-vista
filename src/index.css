@@ -2,87 +2,118 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Cafe Management System Design System - Beautiful Persian Cafe Theme */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Main Brand Colors - Warm Cafe Theme */
+    --background: 30 8% 97%;
+    --foreground: 30 15% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 28 12% 98%;
+    --card-foreground: 30 15% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 28 12% 98%;
+    --popover-foreground: 30 15% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 25 95% 45%;  /* Warm Orange - Coffee Bean */
+    --primary-foreground: 30 8% 97%;
+    --primary-glow: 35 100% 60%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 35 25% 90%;
+    --secondary-foreground: 30 15% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 35 15% 93%;
+    --muted-foreground: 30 8% 50%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 40 100% 70%;  /* Golden Yellow */
+    --accent-foreground: 30 15% 15%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 30 8% 97%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Table Status Colors - Easy to customize */
+    --table-empty: 120 70% 50%;      /* Green - خالی */
+    --table-reserved: 45 100% 50%;   /* Yellow - رزرو */
+    --table-occupied: 0 80% 55%;     /* Red - در حال سرویس */
+    --table-paid: 210 100% 60%;      /* Blue - تسویه شده */
+
+    /* Cafe Atmosphere Colors */
+    --coffee-dark: 25 30% 25%;
+    --coffee-medium: 28 40% 40%;
+    --coffee-light: 30 50% 75%;
+    --cream: 40 20% 90%;
+    --espresso: 20 40% 20%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-warm: linear-gradient(180deg, hsl(var(--background)), hsl(35 15% 95%));
+    --gradient-cafe: linear-gradient(45deg, hsl(var(--coffee-medium)), hsl(var(--primary)));
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px hsl(var(--primary) / 0.15);
+    --shadow-table: 0 6px 25px hsl(var(--foreground) / 0.1);
+    --shadow-floating: 0 8px 32px hsl(var(--primary) / 0.2);
+
+    --border: 35 20% 88%;
+    --input: 35 20% 88%;
+    --ring: 25 95% 45%;
 
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Animations & Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 30 8% 8%;
+    --foreground: 30 8% 95%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 30 8% 10%;
+    --card-foreground: 30 8% 95%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 30 8% 10%;
+    --popover-foreground: 30 8% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 25 95% 55%;
+    --primary-foreground: 30 8% 8%;
+    --primary-glow: 35 100% 70%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 30 15% 15%;
+    --secondary-foreground: 30 8% 95%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 30 15% 15%;
+    --muted-foreground: 30 8% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 40 100% 60%;
+    --accent-foreground: 30 8% 8%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 30 8% 95%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --table-empty: 120 60% 45%;
+    --table-reserved: 45 90% 55%;
+    --table-occupied: 0 75% 50%;
+    --table-paid: 210 90% 55%;
+
+    --coffee-dark: 25 40% 15%;
+    --coffee-medium: 28 30% 25%;
+    --coffee-light: 30 20% 40%;
+    --cream: 40 15% 20%;
+    --espresso: 20 50% 10%;
+
+    --border: 30 15% 20%;
+    --input: 30 15% 20%;
+    --ring: 25 95% 55%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;

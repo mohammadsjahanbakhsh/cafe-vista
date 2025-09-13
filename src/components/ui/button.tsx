@@ -15,6 +15,10 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        // Cafe-themed variants
+        cafe: "bg-gradient-to-r from-coffee-medium to-coffee-dark text-white hover:shadow-soft transition-all duration-300",
+        premium: "bg-gradient-to-r from-primary to-primary-glow text-primary-foreground hover:shadow-floating transition-all duration-300",
+        table: "bg-table-empty text-white hover:bg-table-empty/90 transition-colors",
       },
       size: {
         default: "h-10 px-4 py-2",

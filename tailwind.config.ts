@@ -22,6 +22,7 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          glow: "hsl(var(--primary-glow))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -47,6 +48,21 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Table Status Colors
+        table: {
+          empty: "hsl(var(--table-empty))",
+          reserved: "hsl(var(--table-reserved))",
+          occupied: "hsl(var(--table-occupied))",
+          paid: "hsl(var(--table-paid))",
+        },
+        // Cafe Theme Colors  
+        coffee: {
+          dark: "hsl(var(--coffee-dark))",
+          medium: "hsl(var(--coffee-medium))", 
+          light: "hsl(var(--coffee-light))",
+        },
+        cream: "hsl(var(--cream))",
+        espresso: "hsl(var(--espresso))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
